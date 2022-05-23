@@ -9,9 +9,14 @@ import {
 } from "./style";
 import { Outlet, NavLink, useNavigate } from "react-router-dom";
 import { navbar } from "../../utils/navbar";
+import Button from "../Generic/Button";
 
 export const Navbar = () => {
   const navigate = useNavigate();
+
+  const gotoSignIn = () => {
+    navigate("/signin");
+  };
   return (
     <Wrapper className="nocopy">
       <Container>
@@ -32,7 +37,9 @@ export const Navbar = () => {
             })}
           </NavbarBody>
           <Logo>
-            <button width={"120px"}>Signin</button>
+            <Button onClick={gotoSignIn} width={"120px"}>
+              Signin
+            </Button>
           </Logo>
         </NavbarWrapper>
       </Container>
