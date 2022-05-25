@@ -8,7 +8,7 @@ export const Filter = () => {
     // console.log(searchQuery);
   };
 
-  const onChange = ({ target }) => {};
+  // const onChange = ({ target }) => {};
 
   const advancedSearch = (
     <Advanced>

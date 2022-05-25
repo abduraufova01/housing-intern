@@ -1,25 +1,25 @@
 import styled from "styled-components";
 
-const getType = (type) => {
-  switch (type) {
-    case "secondary":
-      return {
-        border: "1px solid #e6e9ec",
-        color: "#0D263B",
-      };
-    case "primary":
-      return {
-        background: "#0061DF",
-        color: "#FFFFFF",
-        border: "none",
-      };
-    default:
-      return {
-        border: "1px solid #E6E9EC",
-        color: "#FFFFFF",
-      };
-  }
-};
+// const getType = (type) => {
+//   switch (type) {
+//     case "secondary":
+//       return {
+//         border: "1px solid #e6e9ec",
+//         color: "#0D263B",
+//       };
+//     case "primary":
+//       return {
+//         background: "#0061DF",
+//         color: "#FFFFFF",
+//         border: "none",
+//       };
+//     default:
+//       return {
+//         border: "1px solid #E6E9EC",
+//         color: "#FFFFFF",
+//       };
+//   }
+// };
 
 const Container = styled.input`
   display: flex;

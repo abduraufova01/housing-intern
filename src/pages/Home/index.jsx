@@ -1,6 +1,6 @@
 import React from 'react'
 import Home from '../../components/Home';
-import { Container } from './style';
+// import { Container } from './style';
 
 export const HomePage = () => {
   return (
