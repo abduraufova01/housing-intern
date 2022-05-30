@@ -7,16 +7,19 @@ import { navbar } from "../utils/navbar";
 const Root = () => {
   return (
     <Routes>
+      {/* <Navbar /> */}
       {/* {navbar.map(({ path, Element, id, hidden }) => {
         return hidden && <Route key={id} path={path} element={Element} />;
       })} */}
       <Route element={<Navbar />}>
         {navbar.map(({ path, Element, id, hidden }) => {
-          return !hidden && <Route key={id} path={path} element={Element} />;
+          return (
+            /*!hidden &&*/ <Route key={id} path={path} element={Element} />
+          );
         })}
         <Route path="/" element={<Navigate to={"/home"} />} />
       </Route>
-      <Route path="*" element={<div>not found</div>} />
+      <Route path="*" element={<div>page not found</div>} />
     </Routes>
   );
 };

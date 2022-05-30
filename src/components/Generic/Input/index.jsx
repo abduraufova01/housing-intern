@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Icon, Wrapper } from "./style";
 
-export const Input = ({
+const Input = ({
   children,
   onClick,
   height,
@@ -15,9 +15,11 @@ export const Input = ({
   onChange,
   placeholder,
   defaultValue,
+  name,
+  value,
 }) => {
   return (
-    <Wrapper mr={mr} ml={ml} mb={mb} mt={mt}>
+    <Wrapper>
       <Icon>{children}</Icon>
       <Container
         defaultValue={defaultValue}
@@ -28,6 +30,8 @@ export const Input = ({
         width={width}
         height={height}
         onClick={onClick}
+        name={name}
+        value={value}
       />
     </Wrapper>
   );

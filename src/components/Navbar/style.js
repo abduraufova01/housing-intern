@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ReactComponent as logoIcon } from '../../assets/icons/logo.svg'
+import { ReactComponent as logoIcon } from "../../assets/icon/logo.svg";
 
 const Wrapper = styled.div`
   display: flex;
@@ -8,7 +8,6 @@ const Wrapper = styled.div`
 
 const NavbarWrapper = styled.div`
   display: flex;
-  align-items: center;
   height: 64px;
   max-width: var(--width);
   font-family: "Montserrat";
@@ -18,7 +17,7 @@ const NavbarWrapper = styled.div`
   line-height: 24px;
   width: 100%;
   color: #ffffff;
-  padding: 0 130px ;
+  padding: 0 130px;
 `;
 
 const Logo = styled.div`
@@ -37,9 +36,9 @@ Logo.Title = styled("div")`
 const NavbarBody = styled.div`
   display: flex;
   flex: 1;
-  align-content: center;
+  align-items: center;
   justify-content: center;
-  color: white;
+  color: #ffffff;
 `;
 
 const Container = styled.div`
@@ -49,11 +48,11 @@ const Container = styled.div`
   background: var(--primaryColor);
 `;
 
-const activeStyle = ({ isActive }) => {
+const ActiveStyle = ({ isActive }) => {
   return {
     color: isActive ? "#00fff5" : "white",
     textDecoration: "none",
-    margin: "0 32px",
+    margin: " 0 32px",
     fontStyle: "normal",
     fontWeight: 400,
     fontSize: "18px",
@@ -61,4 +60,4 @@ const activeStyle = ({ isActive }) => {
   };
 };
 
-export { Container, Wrapper, NavbarBody, NavbarWrapper, Logo, activeStyle };
+export { Container, Wrapper, NavbarWrapper, NavbarBody, ActiveStyle, Logo };

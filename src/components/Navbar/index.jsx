@@ -1,20 +1,19 @@
 import React from "react";
+import { NavLink, Outlet, useNavigate } from "react-router-dom";
 import {
-  activeStyle,
+  ActiveStyle,
   Container,
   Logo,
   NavbarBody,
   NavbarWrapper,
   Wrapper,
 } from "./style";
-import { Outlet, NavLink, useNavigate } from "react-router-dom";
 import { navbar } from "../../utils/navbar";
 import Button from "../Generic/Button";
 
-export const Navbar = () => {
+const Navbar = () => {
   const navigate = useNavigate();
-
-  const gotoSignIn = () => {
+  const gotoSignin = () => {
     navigate("/signin");
   };
   return (
@@ -29,7 +28,7 @@ export const Navbar = () => {
             {navbar.map((value) => {
               return (
                 !value.hidden && (
-                  <NavLink style={activeStyle} key={value.id} to={value.path}>
+                  <NavLink style={ActiveStyle} key={value.id} to={value.path}>
                     {value.title}
                   </NavLink>
                 )
@@ -37,7 +36,7 @@ export const Navbar = () => {
             })}
           </NavbarBody>
           <Logo>
-            <Button onClick={gotoSignIn} width={"120px"}>
+            <Button onClick={gotoSignin} width={"120px"}>
               Signin
             </Button>
           </Logo>
